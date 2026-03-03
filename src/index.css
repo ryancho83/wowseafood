@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+KR:wght@400;700&family=Noto+Sans+Thai:wght@400;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Noto Sans KR", "Noto Sans Thai", ui-sans-serif, system-ui, sans-serif;
+  --color-deepblue: #002347;
+  --color-oceanblue: #003366;
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-white text-slate-900 antialiased scroll-smooth;
+  }
+}
+
+.bg-deepblue {
+  background-color: var(--color-deepblue);
+}
+
+.text-deepblue {
+  color: var(--color-deepblue);
+}
+
+.border-deepblue {
+  border-color: var(--color-deepblue);
+}
+
+.floating-btn {
+  @apply fixed bottom-6 right-6 flex flex-col gap-3 z-50;
+}
+
+.btn-zalo {
+  @apply w-14 h-14 bg-blue-500 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform;
+}
+
+.btn-line {
+  @apply w-14 h-14 bg-green-500 text-white rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform;
+}
